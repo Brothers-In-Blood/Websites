@@ -47,7 +47,7 @@ env:
   UNICORN_WORKERS: 2
 
   ## TODO: The domain name this Discourse instance will respond to
-  DISCOURSE_HOSTNAME: discourse.bibgamingdev.com
+  DISCOURSE_HOSTNAME: discourse.bibgaming.com
 
   ## Uncomment if you want the container to be started with the same
   ## hostname (-h option) as specified above (default "$hostname-$config")
@@ -89,38 +89,24 @@ hooks:
         cmd:
           - mkdir -p plugins
           - git clone https://github.com/discourse/docker_manager.git
-          - git clone https://github.com/discourse/discourse-spoiler-alert.git
-          - git clone https://github.com/discourse/discourse-plugin-office365-auth.git
-          - git clone https://github.com/angusmcleod/discourse-quick-messages.git
-          - git clone https://github.com/discourse/discourse-solved.git
-          - git clone https://github.com/discourse/discourse-presence.git
-          - git clone https://github.com/cpradio/discourse-plugin-replygif.git
-          - git clone https://github.com/cpradio/discourse-plugin-imgflip.git
-          - git clone https://github.com/scossar/discourse-blog-post.git
-          - git clone https://github.com/vinkas0/discourse-facebook-onebox.git
-          - git clone https://github.com/kasperpeulen/discourse-mathjax.git
-          - git clone https://github.com/discourse/discourse-staff-notes.git
-          - git clone https://github.com/discourse/discourse-adplugin.git
-          - git clone https://github.com/xfalcox/discourse-signatures.git
-          - git clone https://github.com/xfalcox/discourse-patreon.git
-          - git clone https://github.com/iunctis/discourse-formatting-toolbar.git
-          - git clone https://github.com/Mittineague/discourse-kinder-guardian.git
-          - git clone https://github.com/startsat60/discourse-plugin-featured-image.git
-          - git clone https://github.com/techAPJ/discourse-custom-topic-button.git
-    - exec:
-        cd: $home
-        cmd:
-          - git remote remove origin
-          - git config --remove-section branch.master
-          - git config --remove-section branch.tests-passed
-          - git remote add origin [your-discourse-github-url]
-          - git fetch
-          - git remote set-branches --add origin tests-passed
-          - git remote set-branches --add origin master
-          - git branch -u origin/master master
-          - git branch -u origin/tests-passed tests-passed
-          - git reset --hard origin/master
-          - git reset --hard origin/tests-passed
+          # - git clone https://github.com/discourse/discourse-spoiler-alert.git
+          # - git clone https://github.com/discourse/discourse-plugin-office365-auth.git
+          # - git clone https://github.com/angusmcleod/discourse-quick-messages.git
+          # - git clone https://github.com/discourse/discourse-solved.git
+          # - git clone https://github.com/discourse/discourse-presence.git
+          # - git clone https://github.com/cpradio/discourse-plugin-replygif.git
+          # - git clone https://github.com/cpradio/discourse-plugin-imgflip.git
+          # - git clone https://github.com/scossar/discourse-blog-post.git
+          # - git clone https://github.com/vinkas0/discourse-facebook-onebox.git
+          # - git clone https://github.com/kasperpeulen/discourse-mathjax.git
+          # - git clone https://github.com/discourse/discourse-staff-notes.git
+          # - git clone https://github.com/discourse/discourse-adplugin.git
+          # - git clone https://github.com/xfalcox/discourse-signatures.git
+          # - git clone https://github.com/xfalcox/discourse-patreon.git
+          # - git clone https://github.com/iunctis/discourse-formatting-toolbar.git
+          # - git clone https://github.com/Mittineague/discourse-kinder-guardian.git
+          # - git clone https://github.com/startsat60/discourse-plugin-featured-image.git
+          # - git clone https://github.com/techAPJ/discourse-custom-topic-button.git
 ## Any custom commands to run after building
 run:
   - exec: echo "Beginning of custom commands"

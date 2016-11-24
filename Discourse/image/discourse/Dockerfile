@@ -8,7 +8,7 @@ MAINTAINER Sam Saffron "https://twitter.com/samsaffron"
 RUN useradd discourse -s /bin/bash -m -U &&\
     mkdir -p /var/www &&\
     cd /var/www &&\
-    git clone https://github.com/Brothers-In-Blood/discourse &&\
+    git clone https://github.com/discourse/discourse &&\
     cd discourse &&\
     git remote set-branches --add origin tests-passed &&\
     chown -R discourse:discourse /var/www/discourse &&\

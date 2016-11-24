@@ -1,0 +1,105 @@
+/* Remove margins and padding from the list, and add a black background color */
+@font-face {
+  font-family: 'Stencil';
+  font-weight: 100;
+  font-style: normal;
+
+  src: url(http://fonts.gstatic.com/s/stardosstencil/v6/ygEOyTW9a6u4fi4OXEZeTHyjZGU_SYMIAZWjSGDHnGA.woff2);
+}
+ul.logo {
+  position: fixed;
+  top: 0;
+  float:left;
+  overflow: hidden;
+
+  width: 100%; /* Full width */
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  background-color: rgba(0, 0, 0, 0);
+}
+ul.topnav {
+	  position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+
+    overflow: hidden;
+
+    width: 100%; /* Full width */
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Float the list items side by side */
+ul.topnav li {
+    float: right;
+  }
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline;
+
+    padding: 14px 14px;
+
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+
+    color: #ff0000;
+
+    font-family: "Stencil";
+    font-size: 32px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {color: #000000;background-color: #ff0000;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    display: inline-block;
+    float: right;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  ul.topnav.responsive li {
+    display: inline;
+    float: none;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+
+    text-align: left;
+  }
+}
+#background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
+}
