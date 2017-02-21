@@ -1,30 +1,64 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <title>&#946I&#946Gamingdev</title>
-	<meta charset="utf-8" />
-	<link rel="stylesheet" href="/css/twitchpage.css" />
-  <ul class="logo" id="logo">
-  <a href="http://bibgamingdev.com">
-      <img src="http://discourse.bibgamingdev.com/uploads/default/original/1X/67b67a3225fab6f4c093e481dd3dd28805d0853a.png" alt="home" style="width:480px;height:96px;">
-  </a>
-</ul>
-  <ul class="topnav" id="topnav">
-    <li>
-      	<a href="https://www.patreon.com/user?u=4371658">
-            <img src="http://discourse.bibgamingdev.com/uploads/default/original/1X/bcdca2592de782a8742978d5ef80b5c618e6398e.png" alt="Patreon" style="width:20px;height:20px;">
-    	  <a href="https://twitter.com/BIBGamingDev">
-            <img src="http://discourse.bibgamingdev.com/uploads/default/original/1X/82346902f2b50b29ccd713287503fab2382e2b2d.png" alt="twitter" style="width:20px;height:20px;">
-        </a></a></a></a></a></a>
-    </li>
-</ul>
-</head>
-<body style="background-color:black;">
-
-
-<center>
-  <iframe src="https://player.twitch.tv/?channel=thegreatmonkey68" frameborder="0" scrolling="no" height="378" width="620"></iframe><a href="https://www.twitch.tv/thegreatmonkey68?tt_medium=live_embed&tt_content=text_link" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">Watch live video from Thegreatmonkey68 on www.twitch.tv</a>
-</center>
-
-
-</body>
+  <head>
+    <title>BIB Gaming</title>
+  	<meta charset="utf-8" />
+    <style>
+      .twitchleft {
+        display: block;
+        float: left;
+        top: 0px;
+        left: 0;
+        width: 50%;
+        padding-top: 100px;
+      }
+      .twitchright {
+        display: block;
+        float: right;
+        top: 0px;
+        right: 0;
+        width: 50%;
+        padding-top: 100px;
+      }
+    </style>
+    <link rel="stylesheet" href="/css/BIBMenu.css" />
+  </head>
+  <body style="background-color:black;">
+    <div class="dropdown">
+      <button class="dropbtn">
+        <a href="http://bibgaming.com">
+          <img src="/images/logo.png" alt="menu" style="width:480px;height:96px;">
+        </a>
+      </button>
+      <div class="dropdown-content">
+        <a href="http://forums.bibgaming.com">
+          <img src="/images/bib.png" style="width:20px;height:20px;"> Forums
+        <a href="http://forums.bibgaming.com/c/General/News">
+          <img src="/images/bib.png" style="width:20px;height:20px;"> News
+        </a>
+        <a href="/twitchpage.html">
+          <img src="/images/bib.png" style="width:20px;height:20px;"> Streams
+        </a>
+        <a href="https://www.patreon.com/user?u=4371658" target="_blank">
+          <img src="/images/AFPatreonBIG.png" alt="Patreon" style="width:20px;height:20px;"> Patreon
+        </a>
+        <a href="https://twitter.com/BIBGamingDev" target="_blank">
+          <img src="/images/twitter-xxl.png" alt="Twitter" style="width:20px;height:20px;"> Twitter
+        </a>
+        <a href="https://www.youtube.com/user/WilksGameing" target="_blank">
+          <img src="/images/youtube.png" alt="Youtube Channel" style="width:20px;height:20px;"> Youtube
+        </a>
+      </div>
+    </div>
+    <center>
+      <div class="twitchleft" id="twitchleft">
+        <iframe src="https://player.twitch.tv/?channel=thegreatmonkey68" frameborder="0" scrolling="no" height="378" width="620"></iframe>
+        <iframe src="https://player.twitch.tv/?channel=thelacks87" frameborder="0" scrolling="no" height="378" width="620"></iframe>
+      </div>
+      <div class="twitchright" id="twitchright">
+        <iframe src="https://player.twitch.tv/?channel=bob_lee_swagger2733" frameborder="0" scrolling="no" height="378" width="620"></iframe>
+        <iframe src="https://player.twitch.tv/?channel=horchatavendor" frameborder="0" scrolling="no" height="378" width="620">
+      </div>
+    </center>
+  </body>
 </html>

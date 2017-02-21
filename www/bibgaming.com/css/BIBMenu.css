@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Stencil';
+  font-weight: 100;
+  font-style: normal;
+  src: url(http://fonts.gstatic.com/s/stardosstencil/v6/ygEOyTW9a6u4fi4OXEZeTHyjZGU_SYMIAZWjSGDHnGA.woff2);
+}
+.dropbtn {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+  font-family: "Stencil";
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  position:fixed;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  top: 120px;
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.01);
+}
+.dropdown-content a {
+  color: red;
+  font-family: "Stencil";
+  font-size: 24px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {color: black; background-color: rgba(204, 0, 0, 0.5)}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: rgba(0, 0, 0, 0);
+}
